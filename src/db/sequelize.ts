@@ -32,7 +32,7 @@ export const Ticket = sequelize.define('ticket', {
 	timestamps: false
 });
 
-export const Aircrafts = sequelize.define('aircrafts', {
+export const Aircrafts = sequelize.define('aircrafts_data', {
 	// Model attributes are defined here
 	aircraft_code: {
 		type: DataTypes.STRING,

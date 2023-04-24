@@ -21,7 +21,7 @@ app.post('/aircrafts',(req: Request,res: Response)=>{
 
 })
 app.put('/aircrafts',(req:any,res:any)=>{
-
+	console.log('hello')
 
 })
 app.delete('/aircrafts/:id',(req:any,res:any)=> {
@@ -30,7 +30,7 @@ app.delete('/aircrafts/:id',(req:any,res:any)=> {
 		.catch(err =>{ req.status(404).send(err)})
 })
 
-
+//test commit
 
 
 

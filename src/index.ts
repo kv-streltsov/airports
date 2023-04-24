@@ -20,6 +20,10 @@ app.post('/aircrafts',(req: Request,res: Response)=>{
 		.catch(err=> res.status(400).send(err))
 
 })
+app.put('/aircrafts',(req:any,res:any)=>{
+
+
+})
 app.delete('/aircrafts/:id',(req:any,res:any)=> {
 	Aircrafts.destroy({where: {aircraft_code: req.params.id}})
 		.then(data=>{res.sendStatus(200)})

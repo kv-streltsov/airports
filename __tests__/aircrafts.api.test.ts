@@ -16,11 +16,21 @@ describe ('test API /aircafts',  ()=>{
 			.send(aircraft)
 			.expect(201)
 	})
+
 	it('GET    should return 200', async()=>{
 		await request(app)
 			.get('/aircrafts/666')
 			.expect(200,'{"aircraft_code":"666","model":{"en":"Magic carpet","ru":"Ковёр самолёт"},"range":666}')
 	})
+
+	it('PUT    should return 200',async ()=>{
+		aircraft.range = 777
+		await request(app)
+			.put('/aircrafts/666')
+			.send(aircraft)
+			.expect(200)
+	})
+
 	it('DELETE should return 200', async ()=>{
 		await request(app)
 			.del('/aircrafts/666')
@@ -29,4 +39,3 @@ describe ('test API /aircafts',  ()=>{
 
 
 })
-
